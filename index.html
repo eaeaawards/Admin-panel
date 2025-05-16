@@ -1,12 +1,70 @@
-<!DOCTYPE html>
-<html>
+margintml lang="sw">
 <head>
-    <title>Admin Panel</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Eaea Awards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 15px;
+        }
+        .container {
+            margin: 20px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .dashboard {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
-    <h1>Karibu kwenye Admin Panel</h1>
-    <button onclick="alertMessage()">Bofya Hapa</button>
-    <script src="script.js"></script>
+    <header>
+        <h1>Admin Panel - Eaea Awards</h1>
+        <a href="https://eaeaawards.github.io/Eaea_Awards/" style="color: white;">Rudi kwenye Tovuti</a>
+    </header>
+    <div class="container">
+        <h2>Karibu kwenye Admin Panel</h2>
+        <button onclick="showDashboard()">Fungua Dashibodi</button>
+        <div id="dashboard" class="dashboard" style="display: none;">
+            <h3>Dashibodi ya Takwimu</h3>
+            <p>Hakuna takwimu kwa sasa.</p>
+        </div>
+    </div>
+    <script>
+        function showDashboard() {
+            var dashboard = document.getElementById("dashboard");
+            if (dashboard.style.display === "none") {
+                dashboard.style.display = "block";
+            } else {
+                dashboard.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
